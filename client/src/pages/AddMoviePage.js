@@ -9,17 +9,14 @@ import Input from "../components/Input";
 import { useHistory } from "react-router";
 import Alert from "../components/Alert";
 import Spinner from "../components/Spinner/Spinner";
+import { toast } from "react-toastify";
 
 export default function AddMoviePage() {
   const [image, setImage] = useState("");
 
-  const { category } = useSelector((state) => state.category);
   const { success, error, loading } = useSelector((state) => state.movie);
   const dispatch = useDispatch();
   const history = useHistory();
-  useEffect(() => {
-    dispatch(getCategory());
-  }, [dispatch]);
 
   return (
     <Layout>
@@ -37,7 +34,7 @@ export default function AddMoviePage() {
               movieData.append("nama", values.title);
               movieData.append("file", image);
 
-              dispatch(addMovie(movieData, history));
+              dispatch(addMovie(movieData, history, toast));
               setSubmitting(false);
               setTimeout(() => {
                 dispatch(resetMovie());

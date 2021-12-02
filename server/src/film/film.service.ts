@@ -16,17 +16,17 @@ export class FilmService {
     return newFilm;
   }
 
-  async findAll(page: number = 1) {
+  async findAll(page: number = 1, size: number = 10) {
     const [totalFilms] = await getConnection().manager.query(
       `SELECT COUNT(*) as totalItems FROM film`,
     );
 
     const films = await getConnection().manager.query(
       `SELECT * FROM film
-      ORDER BY created_at DESC
-      LIMIT 10
+      ORDER BY updated_at DESC
+      LIMIT ?
       OFFSET ?`,
-      [(+page - 1) * 10],
+      [+size, (+page - 1) * 10],
     );
 
     const paginatedFilms = {

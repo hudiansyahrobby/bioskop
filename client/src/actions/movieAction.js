@@ -15,7 +15,7 @@ export const addMovie = (movie, history, toast) => async (dispatch) => {
     // dispatch({ type: MOVIE.ADD_MOVIE_SUCCESS, payload: { movie: data } });
     history.push("/movies");
   } catch (error) {
-    toast.success("Gagal Menambahkan Film Baru", {
+    toast.error("Gagal Menambahkan Film Baru", {
       theme: "dark",
     });
     dispatch({
@@ -113,10 +113,10 @@ export const deleteMovie = (id, toast) => async (dispatch) => {
     toast.error("Gagal Menghapus Film", {
       theme: "dark",
     });
-    dispatch({
-      type: MOVIE.DELETE_MOVIE_FAIL,
-      payload: { error: error.response.data.message },
-    });
+    // dispatch({
+    //   type: MOVIE.DELETE_MOVIE_FAIL,
+    //   payload: { error: error.response.data.message },
+    // });
   }
 };
 

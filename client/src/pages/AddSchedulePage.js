@@ -22,7 +22,11 @@ export default function AddMoviePage() {
   const history = useHistory();
 
   useEffect(() => {
-    dispatch(getMovies());
+    dispatch(
+      getMovies({
+        size: 100,
+      })
+    );
     dispatch(getStudios());
   }, []);
 

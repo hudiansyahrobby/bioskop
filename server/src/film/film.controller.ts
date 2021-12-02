@@ -50,7 +50,6 @@ export class FilmController {
     @Body() createFilmDto: CreateFilmDto,
     @UploadedFile() file: Express.Multer.File,
   ) {
-    console.log(file);
     const _createFilmDto = {
       ...createFilmDto,
       poster: file.filename,
@@ -60,9 +59,7 @@ export class FilmController {
 
   @Get()
   findAll(@Query() query) {
-    console.log('QUERY', query);
-
-    return this.filmService.findAll(query.page);
+    return this.filmService.findAll(query.page, query.size);
   }
 
   @Get(':id')
