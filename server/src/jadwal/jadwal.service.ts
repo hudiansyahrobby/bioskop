@@ -74,14 +74,6 @@ export class JadwalService {
       `,
       [jadwalId],
     );
-    // const kursi = await getConnection().manager.query(
-    //   `SELECT kursi.id, kursi.no_kursi, jadwal_kursi.isBooked FROM jadwal_kursi
-    //   INNER JOIN kursi on kursi.id=jadwal_kursi.kursiId
-    //   WHERE jadwal_kursi.jadwalId = ?
-    //   ORDER BY no_kursi ASC
-    //   `,
-    //   [jadwalId],
-    // );
     return kursi;
   }
 
