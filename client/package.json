@@ -1,0 +1,63 @@
+{
+  "name": "yuki-cinema",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.20.0",
+    "date-fns": "^2.16.1",
+    "dotenv": "^8.2.0",
+    "formik": "^2.2.0",
+    "midtrans-client": "^1.2.1",
+    "movie-trailer": "^2.0.6",
+    "postcss": "^8.3.3",
+    "qrcode.react": "^1.0.0",
+    "react": "^16.13.1",
+    "react-datepicker": "^3.3.0",
+    "react-dom": "^16.13.1",
+    "react-paginate": "^6.5.0",
+    "react-redux": "^7.2.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "react-select": "^3.1.1",
+    "react-toastify": "^8.1.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "serve": "^12.0.0",
+    "yup": "^0.29.3"
+  },
+  "scripts": {
+    "start": "serve -s build",
+    "dev": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css",
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/main.css"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^8.1.0",
+    "tailwindcss": "^1.8.13"
+  }
+}

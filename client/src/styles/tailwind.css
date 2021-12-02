@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+@import "tailwindcss/base";
+
+/* Write your own custom base styles here */
+
+body {
+    background-color: black;
+  }
+  
+  /* Start purging... */
+  
+@import "tailwindcss/components";
+
+/* Stop purging. */
+
+/* Write your own custom component styles here */
+
+.btn {
+  @apply px-4 py-2;
+}
+
+.btn-primary {
+  @apply bg-primary rounded-lg;
+}
+
+.btn-primary-outline {
+  @apply border-2 rounded-lg border-primary;
+}
+  
+/* Start purging... */
+  
+@import "tailwindcss/utilities";
+
+/* Stop purging. */
+
+/* Your own custom utilities */

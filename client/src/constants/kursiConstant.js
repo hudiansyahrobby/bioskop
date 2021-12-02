@@ -1,0 +1,3 @@
+export const GET_KURSI_INIT = "GET_KURSI_INIT";
+export const GET_KURSI_SUCCESS = "GET_KURSI_SUCCESS";
+export const GET_KURSI_FAIL = "GET_KURSI_FAIL";
